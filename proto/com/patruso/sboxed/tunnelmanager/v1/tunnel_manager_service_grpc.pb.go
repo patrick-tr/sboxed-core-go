@@ -6,7 +6,7 @@
 
 // buf:lint:ignore PACKAGE_DIRECTORY_MATCH
 
-package sboxed
+package tunnelmanager
 
 import (
 	context "context"
