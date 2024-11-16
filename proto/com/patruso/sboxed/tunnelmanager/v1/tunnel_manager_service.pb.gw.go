@@ -2,11 +2,11 @@
 // source: proto/com/patruso/sboxed/tunnelmanager/v1/tunnel_manager_service.proto
 
 /*
-Package sboxed is a reverse proxy.
+Package core is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package sboxed
+package core
 
 import (
 	"context"
