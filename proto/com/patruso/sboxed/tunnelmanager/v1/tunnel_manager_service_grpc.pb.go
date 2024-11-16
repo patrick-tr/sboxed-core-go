@@ -6,7 +6,7 @@
 
 // buf:lint:ignore PACKAGE_DIRECTORY_MATCH
 
-package core
+package v1
 
 import (
 	context "context"

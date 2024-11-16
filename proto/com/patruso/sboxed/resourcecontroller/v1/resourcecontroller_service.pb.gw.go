@@ -2,11 +2,11 @@
 // source: proto/com/patruso/sboxed/resourcecontroller/v1/resourcecontroller_service.proto
 
 /*
-Package core is a reverse proxy.
+Package v1 is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package core
+package v1
 
 import (
 	"context"
