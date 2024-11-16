@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: proto/com/patruso/sboxed/resourcecontroller/v1/resourcecontroller_service.proto
 
-package resourcecontroller
+package sboxed
 
 import (
 	context "context"
