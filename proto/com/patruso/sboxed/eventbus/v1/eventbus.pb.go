@@ -6,10 +6,10 @@
 
 // buf:lint:ignore PACKAGE_DIRECTORY_MATCH
 
-package v1
+package eventbus
 
 import (
-	v1 "github.com/sboxed/tunnelmanager/v1"
+	tunnelmanager "github.com/patrick-tr/sboxed/tunnelmanager"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -107,7 +107,7 @@ type CreatePeerEvent struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PeerList []*v1.WgPeer `protobuf:"bytes,1,rep,name=peer_list,json=peerList,proto3" json:"peer_list,omitempty"`
+	PeerList []*tunnelmanager.WgPeer `protobuf:"bytes,1,rep,name=peer_list,json=peerList,proto3" json:"peer_list,omitempty"`
 }
 
 func (x *CreatePeerEvent) Reset() {
@@ -140,7 +140,7 @@ func (*CreatePeerEvent) Descriptor() ([]byte, []int) {
 	return file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CreatePeerEvent) GetPeerList() []*v1.WgPeer {
+func (x *CreatePeerEvent) GetPeerList() []*tunnelmanager.WgPeer {
 	if x != nil {
 		return x.PeerList
 	}
@@ -152,7 +152,7 @@ type RemovePeerEvent struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PeerList []*v1.WgPeer `protobuf:"bytes,1,rep,name=peer_list,json=peerList,proto3" json:"peer_list,omitempty"`
+	PeerList []*tunnelmanager.WgPeer `protobuf:"bytes,1,rep,name=peer_list,json=peerList,proto3" json:"peer_list,omitempty"`
 }
 
 func (x *RemovePeerEvent) Reset() {
@@ -185,7 +185,7 @@ func (*RemovePeerEvent) Descriptor() ([]byte, []int) {
 	return file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *RemovePeerEvent) GetPeerList() []*v1.WgPeer {
+func (x *RemovePeerEvent) GetPeerList() []*tunnelmanager.WgPeer {
 	if x != nil {
 		return x.PeerList
 	}
@@ -229,10 +229,10 @@ var file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_rawDesc = []byte{
 	0x74, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x2b, 0x2e, 0x63, 0x6f, 0x6d, 0x2e, 0x70, 0x61,
 	0x74, 0x72, 0x75, 0x73, 0x6f, 0x2e, 0x73, 0x62, 0x6f, 0x78, 0x65, 0x64, 0x2e, 0x74, 0x75, 0x6e,
 	0x6e, 0x65, 0x6c, 0x6d, 0x61, 0x6e, 0x61, 0x67, 0x65, 0x72, 0x2e, 0x76, 0x31, 0x2e, 0x57, 0x67,
-	0x50, 0x65, 0x65, 0x72, 0x52, 0x08, 0x70, 0x65, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x1f,
-	0x5a, 0x1d, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x62, 0x6f,
-	0x78, 0x65, 0x64, 0x2f, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x62, 0x75, 0x73, 0x2f, 0x76, 0x31, 0x62,
-	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x50, 0x65, 0x65, 0x72, 0x52, 0x08, 0x70, 0x65, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74, 0x42, 0x27,
+	0x5a, 0x25, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x70, 0x61, 0x74,
+	0x72, 0x69, 0x63, 0x6b, 0x2d, 0x74, 0x72, 0x2f, 0x73, 0x62, 0x6f, 0x78, 0x65, 0x64, 0x2f, 0x65,
+	0x76, 0x65, 0x6e, 0x74, 0x62, 0x75, 0x73, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -249,10 +249,10 @@ func file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_rawDescGZIP() []by
 
 var file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_goTypes = []any{
-	(*EventEnvelope)(nil),   // 0: com.patruso.sboxed.eventbus.v1.EventEnvelope
-	(*CreatePeerEvent)(nil), // 1: com.patruso.sboxed.eventbus.v1.CreatePeerEvent
-	(*RemovePeerEvent)(nil), // 2: com.patruso.sboxed.eventbus.v1.RemovePeerEvent
-	(*v1.WgPeer)(nil),       // 3: com.patruso.sboxed.tunnelmanager.v1.WgPeer
+	(*EventEnvelope)(nil),        // 0: com.patruso.sboxed.eventbus.v1.EventEnvelope
+	(*CreatePeerEvent)(nil),      // 1: com.patruso.sboxed.eventbus.v1.CreatePeerEvent
+	(*RemovePeerEvent)(nil),      // 2: com.patruso.sboxed.eventbus.v1.RemovePeerEvent
+	(*tunnelmanager.WgPeer)(nil), // 3: com.patruso.sboxed.tunnelmanager.v1.WgPeer
 }
 var file_proto_com_patruso_sboxed_eventbus_v1_eventbus_proto_depIdxs = []int32{
 	1, // 0: com.patruso.sboxed.eventbus.v1.EventEnvelope.create_peer_event:type_name -> com.patruso.sboxed.eventbus.v1.CreatePeerEvent

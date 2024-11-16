@@ -6,7 +6,7 @@
 
 // buf:lint:ignore PACKAGE_DIRECTORY_MATCH
 
-package v1
+package tunnelmanager
 
 import (
 	context "context"

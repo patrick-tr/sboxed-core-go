@@ -2,11 +2,11 @@
 // source: proto/com/patruso/sboxed/tunnelmanager/v1/tunnel_manager_service.proto
 
 /*
-Package v1 is a reverse proxy.
+Package tunnelmanager is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package v1
+package tunnelmanager
 
 import (
 	"context"
